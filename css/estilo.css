@@ -1,0 +1,73 @@
+* {
+	box-sizing: border-box;
+}
+html {
+	height: 100%;  
+	margin: 0;
+}
+body {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	margin: 0;	
+	background-color: black;
+}
+.contenedor {
+	margin: auto; 
+	padding: 0;
+	overflow: hidden;
+	position: relative;
+}
+.contenedor:hover {
+	width: auto;
+	height: 563px;
+	border: 5px solid transparent;
+	border-image: linear-gradient(to right, #cccc00 0%, #0066ff 100%);
+	border-image-slice: 1;
+	transition-duration: 0.5s;
+}
+.contenedor:hover .mortal-combat-image {
+	transform: scale(1.5);
+	transition-duration:2s;
+	transition-delay: 0.2s;
+}
+.contenedor:hover .logo {
+	opacity:1;
+	transform: rotateY(0deg);
+	transition-duration: 1.5s;
+	transition-delay: 1s;
+}
+.contenedor:hover .titulo {
+	opacity:1;
+	transition-duration: 2s;
+	transition-delay: 1.5s;
+}
+.background {
+	height: 563px;
+	position: relative;
+}
+.mortal-combat-image {
+	transition-duration:1s;
+}
+.logo {
+	position: absolute;
+	z-index:1;
+	left: 40%;
+	top: 40%;
+	opacity:0;
+	transform: rotateY(270deg);
+	transition-duration:0.5s;
+}
+.titulo {
+	position: absolute;
+	width: 100%;
+	z-index:1;
+	text-align: center;
+	top: 65%;
+	font-family: 'Cinzel', serif;
+	font-size: 70px;
+	color: #0f0f0f;
+	text-shadow: 0px 0px 8px red;
+	opacity:0;
+	transition-duration:0.5s;
+}
